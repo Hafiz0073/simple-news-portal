@@ -13,7 +13,7 @@ displayCetagories = categories => {
         userLi.classList.add('nav-item')
         userLi.innerHTML = `
              
-                <a class="nav-link"  onclick="loadCatDetails('${category.category_id}')"> ${category.category_name} </a>
+                <a class="nav-link" href="#"  onclick="loadCatDetails('${category.category_id}')"> ${category.category_name} </a>
             `;
         cetagoryLi.append(userLi)
 
