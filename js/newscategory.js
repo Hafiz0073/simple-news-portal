@@ -24,9 +24,9 @@ const loadCatDetails = (catID) => {
     // console.log(url);
     fetch(url)
         .then(res => res.json())
-        .then(data => displayCetDetails(data.data))
+        .then(data => displayCatDetails(data.data))
 }
-const displayCetDetails = catDetails => {
+const displayCatDetails = catDetails => {
     const catDetailsDiv = document.getElementById('news-details')
     catDetailsDiv.innerHTML = '';
     catDetails.forEach(newsdetails => {
@@ -41,19 +41,19 @@ const displayCetDetails = catDetails => {
         <div class="col-md-9">
             <div class="card-body">
                 <h5 class="card-title">${newsdetails.title}</h5>
-                <p class="card-text">${newsdetails.details.slice(0, 600)}</p>
+                <p class="card-text">${newsdetails.details.slice(0, 600) + '...'}</p>
                
             </div>
             <div class="d-flex justify-content-between p-2 pt-4">
                 <div class="d-flex col-md-4 " id="author">
                     <img class="rounded-circle" alt="avatar1" width="50px" height="50px"
                         src="${newsdetails.author.img}" />
-                    <div class="d-flex align-items-center flex-column ps-3">
+                    <div class="d-flex flex-column ps-2">
                         <span class="text-muted">${newsdetails.author.name ? newsdetails.author.name : 'no data available'}</span>
                         <span class="text-muted">${newsdetails.author.published_date}</span>
                     </div>
                 </div>
-                <div id="viewers" class="col-md-2 d-flex">
+                <div id="viewers" class="col-md-3 d-flex">
                     <p class="text-muted fw-bold "> <i class="fa-regular fa-eye p-2"></i>${newsdetails.total_view ? newsdetails.total_view : 'no data available'}</p>
                 </div>
                 <div id="feedback" class="col-md-2">
@@ -64,7 +64,7 @@ const displayCetDetails = catDetails => {
                     <i class="fa-regular fa-star"></i>
                 </div>
                 <div id="details" class="col-md-1">
-                    <i class="fa-solid fa-arrow-right"></i>
+                <i class="fa-solid fa-arrow-right"  data-bs-toggle="modal" data-bs-target="#newsDetailsModal"></i>
                 </div>
             </div>
         </div>
@@ -75,5 +75,6 @@ const displayCetDetails = catDetails => {
 
 
 }
+
 loadCetagories()
 loadCatDetails('02')
