@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css
+    ">
+    <script src="https://kit.fontawesome.com/e5bc505c8a.js" crossorigin="anonymous"></script>
+    <title>Daily News</title>
+
+
+<body>
+    <header>
+        <!-- primary nav start  -->
+        <nav class="navbar navbar-light bg-light container">
+            <a class="navbar-brand" href="#"><span class="text-white p-3 fw-bold bg-warning">Daily</span><span
+                    class="fw-bold">News</span></a>
+
+
+            <ul class="nav justify-content-end pe-3">
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fw-bold" href="#">Blog</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- seceondary dynamic nevigation  -->
+
+        <nav class="container bg-light pt-4">
+            <hr>
+            <ul class="nav  nav-fill" id="li-item">
+            </ul>
+        </nav>
+        <!-- secondary  dynamic nevigation end -->
+    </header>
+    <main>
+        <div class="container">
+            <h3 class="text-center pt-4">Difference Between var let const</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="2">#</th>
+                        <th colspan="2">var</th>
+                        <th colspan="1">let</th>
+                        <th colspan="2">const</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td colspan="2">The scope of a var variable is functional scope.</td>
+                        <td colspan="2">The scope of a let variable is block scope.</td>
+                        <td colspan="2">The scope of a const variable is block scope.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td colspan="2">It can be updated and re-declared into the scope. </td>
+                        <td colspan="2">It can be updated but cannot be re-declared into the scope. </td>
+                        <td colspan="2">It cannot be updated or re-declared into the scope.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td colspan="2">It can be declared without initialization.</td>
+                        <td colspan="2">It can be declared without initialization. </td>
+                        <td>It cannot be declared without initialization.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td colspan="2">It can be accessed without initialization as its default value is “undefined”.
+                        </td>
+                        <td colspan="2">It cannot be accessed without initialization otherwise it will give
+                            referenceError. </td>
+                        <td>It cannot be accessed without initialization, as it cannot be declared without
+                            initialization.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+    <script src="js/newscategory.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+        "></script>
